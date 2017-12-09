@@ -1844,6 +1844,20 @@
               "parameters": {
                 "preset": "llhp"
               }
+            },
+            {
+              "id": 10,
+              "name": "Lossless",
+              "parameters": {
+                "preset": "lossless"
+              }
+            },
+            {
+              "id": 11,
+              "name": "Lossless High Performance",
+              "parameters": {
+                "preset": "losslesshp"
+              }
             }
           ]
         },
@@ -2103,24 +2117,6 @@
                   }
                 }
               ]
-            },
-            {
-              "id": 6,
-              "name": "Lossless",
-              "pixelFormat": "yuv444p",
-              "parameters": {
-                "preset": "lossless",
-                "profile": "high444"
-              }
-            },
-            {
-              "id": 7,
-              "name": "Lossless High Performance",
-              "pixelFormat": "yuv444p",
-              "parameters": {
-                "preset": "losslesshp",
-                "profile": "high444"
-              }
             }
           ]
         },
@@ -2203,17 +2199,6 @@
           }
         },
         {
-          "name": "h264_nvenc2Pass",
-          "label": "2pass Encoding",
-          "group": "VKDRh264NVENCAdvGroup",
-          "type": "bool",
-          "flags": [],
-          "defaultValue": true,
-          "parameters": {
-            "2pass": ""
-          }
-        },
-        {
           "name": "h264_nvencBDC",
           "label": "Blu-Ray Compatibility",
           "group": "VKDRh264NVENCAdvGroup",
@@ -2222,6 +2207,17 @@
           "defaultValue": false,
           "parameters": {
             "bluray-compat": ""
+          }
+        },
+        {
+          "name": "h264_nvenc2PassEncoding",
+          "label": "2 Pass Encoding",
+          "group": "VKDRh264NVENCAdvGroup",
+          "type": "bool",
+          "flags": [],
+          "defaultValue": true,
+          "parameters": {
+            "2pass": ""
           }
         },
         {
