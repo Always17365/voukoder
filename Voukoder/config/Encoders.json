@@ -53,6 +53,21 @@
           "name": "VKDRx264MiscGroup",
           "label": "Miscellaneous",
           "parent": "VKDRAdvVideoCodecTabGroup"
+        },
+        {
+          "name": "VKDRh264NVENCAdvGroup",
+          "label": "Advanced Settings",
+          "parent": "VKDRAdvVideoCodecTabGroup"
+        },
+        {
+          "name": "VKDRh264NVENCGPUGroup",
+          "label": "NVIDIA GPU",
+          "parent": "VKDRAdvVideoCodecTabGroup"
+        },
+        {
+          "name": "VKDRh264NVENCGOPGroup",
+          "label": "GOP and QP",
+          "parent": "VKDRAdvVideoCodecTabGroup"
         }
       ],
       "multipass": {
@@ -1917,7 +1932,7 @@
                   }
                 },
                 {
-                  "name": "h264_nvencStrategyVBR",
+                  "name": "h264_nvencStrategyVBRMax",
                   "label": "Max. Bitrate (kbit)",
                   "type": "int",
                   "flags": [ "slider" ],
@@ -1963,7 +1978,7 @@
                   }
                 },
                 {
-                  "name": "h264_nvencStrategyVBRHQ",
+                  "name": "h264_nvencStrategyVBRHQMax",
                   "label": "Max. Bitrate (kbit)",
                   "type": "int",
                   "flags": [ "slider" ],
@@ -2112,7 +2127,7 @@
         {
           "name": "h264_nvencKeyInt",
           "label": "Max. GOP Size",
-          "group": "VKDRx264GOPGroup",
+          "group": "VKDRh264NVENCGOPGroup",
           "type": "int",
           "flags": [],
           "defaultValue": 250,
@@ -2124,8 +2139,8 @@
         },
         {
           "name": "h264_nvencBFrames",
-          "label": "B-Frames",
-          "group": "VKDRx264GOPGroup",
+          "label": "Number of B-Frames",
+          "group": "VKDRh264NVENCGOPGroup",
           "type": "int",
           "flags": [],
           "defaultValue": 2,
@@ -2138,7 +2153,7 @@
         {
           "name": "h264_nvencQPP",
           "label": "QP Value For P-Frames",
-          "group": "VKDRx264QPPGroup",
+          "group": "VKDRh264NVENCGOPGroup",
           "type": "int",
           "flags": [],
           "defaultValue": -1,
@@ -2151,7 +2166,7 @@
         {
           "name": "h264_nvencQPB",
           "label": "QP Value For B-Frames",
-          "group": "VKDRx264QPBGroup",
+          "group": "VKDRh264NVENCGOPGroup",
           "type": "int",
           "flags": [],
           "defaultValue": -1,
@@ -2164,7 +2179,7 @@
         {
           "name": "h264_nvencQPI",
           "label": "QP Value For I-Frames",
-          "group": "VKDRx264QPIGroup",
+          "group": "VKDRh264NVENCGOPGroup",
           "type": "int",
           "flags": [],
           "defaultValue": -1,
@@ -2177,7 +2192,7 @@
         {
           "name": "h264_nvencGPU",
           "label": "GPU Selection",
-          "group": "VKDRx264GPUGroup",
+          "group": "VKDRh264NVENCGPUGroup",
           "type": "int",
           "flags": [],
           "defaultValue": 0,
@@ -2190,7 +2205,7 @@
         {
           "name": "h264_nvenc2Pass",
           "label": "2pass Encoding",
-          "group": "VKDRx264GOPGroup",
+          "group": "VKDRh264NVENCAdvGroup",
           "type": "bool",
           "flags": [],
           "defaultValue": true,
@@ -2201,7 +2216,7 @@
         {
           "name": "h264_nvencBDC",
           "label": "Blu-Ray Compatibility",
-          "group": "VKDRx264BDCGroup",
+          "group": "VKDRh264NVENCAdvGroup",
           "type": "bool",
           "flags": [],
           "defaultValue": false,
