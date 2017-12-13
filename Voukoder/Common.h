@@ -1,5 +1,6 @@
 #pragma once
 
+#include <tmmintrin.h>
 #include <vector>
 #include <map>
 #include <string>
@@ -42,13 +43,6 @@ using json = nlohmann::json;
 
 #define string2wchar_t(str) std::wstring(str.begin(), str.end()).c_str()
 
-typedef struct EncodingData
-{
-	char *pix_fmt;
-	char *plane[4] = {};
-	csSDK_uint32 stride[4];
-} EncodingData;
-
 typedef struct InstanceRec
 {
 	SPBasicSuite *spBasic;
@@ -90,3 +84,4 @@ exNewParamInfo CreateParamElement(ParamInfo *info, bool hidden);
 void PopulateParamValues(InstanceRec *instRec, csSDK_uint32 pluginId, csSDK_int32 groupIndex, vector<EncoderInfo> encoderInfos);
 void ConfigureEncoderParam(InstanceRec *instRec, csSDK_uint32 pluginId, csSDK_int32 groupIndex, ParamInfo *info);
 void ShowMessageBox(InstanceRec *instRec, LPCWSTR lpText, LPCWSTR lpCaption, UINT uType);
+void ShowMessageBox(InstanceRec *instRec, LPCSTR lpText, LPCSTR lpCaption, UINT uType);
